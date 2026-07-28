@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.integrahub.HelloController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;">   <children>
+      <Button fx:id="btnModoConsulta" layoutX="214.0" layoutY="267.0" mnemonicParsing="false" onAction="#onModoConsultaClick" text="ENTRAR (MODO CONSULTA)" />
+      <Button fx:id="btnIniciarSesion" layoutX="249.0" layoutY="209.0" mnemonicParsing="false" onAction="#onIniciarSesionClick" text="INICIAR SESION" />
+      <Button fx:id="btnAsistencia" layoutX="217.0" layoutY="327.0" mnemonicParsing="false" onAction="#onMarcarEntradaSalidaClick" text="MARCAR ENTRADA/SALIDA" />
+      <ImageView fitHeight="145.0" fitWidth="135.0" layoutX="232.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.jpeg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

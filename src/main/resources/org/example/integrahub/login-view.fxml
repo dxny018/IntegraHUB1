@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.integrahub.LoginController">
+    <children>
+        <!-- Botón Flecha Regresar -->
+        <Button fx:id="btnRegresar" layoutX="25.0" layoutY="20.0" mnemonicParsing="false" onAction="#onRegresarClick" style="-fx-background-color: transparent;" text="←">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Button>
+
+        <!-- Logo -->
+        <ImageView fitHeight="110.0" fitWidth="110.0" layoutX="245.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@logo.jpeg" />
+            </image>
+        </ImageView>
+
+        <!-- Campo ID USUARIO -->
+        <Label layoutX="200.0" layoutY="145.0" text="ID USUARIO">
+            <font>
+                <Font name="System Bold" size="11.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtIdUsuario" layoutX="200.0" layoutY="165.0" prefHeight="30.0" prefWidth="200.0" promptText="0123456" />
+
+        <!-- Campo CONTRASEÑA -->
+        <Label layoutX="200.0" layoutY="210.0" text="CONTRASEÑA">
+            <font>
+                <Font name="System Bold" size="11.0" />
+            </font>
+        </Label>
+        <PasswordField fx:id="txtPassword" layoutX="200.0" layoutY="230.0" prefHeight="30.0" prefWidth="200.0" promptText="••••••••" />
+
+        <!-- Botón Ingresar -->
+        <Button fx:id="btnIngresar" layoutX="245.0" layoutY="290.0" mnemonicParsing="false" onAction="#onIngresarClick" prefHeight="32.0" prefWidth="110.0" style="-fx-background-color: #000000; -fx-text-fill: #FFFFFF;" text="Ingresar">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

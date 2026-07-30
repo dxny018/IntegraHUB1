@@ -1,79 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
 
-<AnchorPane prefHeight="550.0" prefWidth="850.0" style="-fx-background-color: #F8F9FA;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.integrahub.DashboardController">
-    <children>
+<BorderPane prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #F0F2F5;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.integrahub.DashboardController">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="15.0" style="-fx-background-color: #0F3443; -fx-background-radius: 30; -fx-padding: 15 25 15 25;">
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </BorderPane.margin>
 
-        <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
-        <HBox alignment="CENTER" layoutX="30.0" layoutY="20.0" prefHeight="50.0" prefWidth="790.0" spacing="10.0" style="-fx-background-color: #0F3B57; -fx-background-radius: 25; -fx-padding: 5;">
-            <children>
-                <Button fx:id="btnAlmacen" mnemonicParsing="false" onAction="#onModuloClick" style="-fx-background-color: #178A96; -fx-text-fill: white; -fx-background-radius: 15;" text="Almacen">
-                    <font><Font name="System Bold" size="12.0" /></font>
-                </Button>
-                <Button fx:id="btnMovimientos" mnemonicParsing="false" onAction="#onModuloClick" style="-fx-background-color: #178A96; -fx-text-fill: white; -fx-background-radius: 15;" text="Movimientos">
-                    <font><Font name="System Bold" size="12.0" /></font>
-                </Button>
-                <Button fx:id="btnProductos" mnemonicParsing="false" onAction="#onModuloClick" style="-fx-background-color: #178A96; -fx-text-fill: white; -fx-background-radius: 15;" text="Productos">
-                    <font><Font name="System Bold" size="12.0" /></font>
-                </Button>
-                <Button fx:id="btnEmpleados" mnemonicParsing="false" onAction="#onModuloClick" style="-fx-background-color: #178A96; -fx-text-fill: white; -fx-background-radius: 15;" text="Empleados">
-                    <font><Font name="System Bold" size="12.0" /></font>
-                </Button>
-                <Button fx:id="btnCliente" mnemonicParsing="false" onAction="#onModuloClick" style="-fx-background-color: #178A96; -fx-text-fill: white; -fx-background-radius: 15;" text="Cliente">
-                    <font><Font name="System Bold" size="12.0" /></font>
-                </Button>
-                <Button fx:id="btnProveedor" mnemonicParsing="false" onAction="#onModuloClick" style="-fx-background-color: #178A96; -fx-text-fill: white; -fx-background-radius: 15;" text="Proveedor">
-                    <font><Font name="System Bold" size="12.0" /></font>
-                </Button>
-                <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#onSalirClick" style="-fx-background-color: #178A96; -fx-text-fill: #FF6B6B; -fx-background-radius: 15;" text="Salir">
-                    <font><Font name="System Bold" size="12.0" /></font>
-                </Button>
-            </children>
+            <Button onAction="#onModuloClick" style="-fx-background-color: #17A2B8; -fx-text-fill: white; -fx-background-radius: 20; -fx-font-weight: bold; -fx-padding: 8 15 8 15;" text="Almacen" />
+            <Button onAction="#onModuloClick" style="-fx-background-color: transparent; -fx-border-color: #17A2B8; -fx-text-fill: #17A2B8; -fx-border-radius: 20; -fx-font-weight: bold; -fx-padding: 8 15 8 15;" text="Movimientos" />
+            <Button onAction="#onModuloClick" style="-fx-background-color: transparent; -fx-border-color: #17A2B8; -fx-text-fill: #17A2B8; -fx-border-radius: 20; -fx-font-weight: bold; -fx-padding: 8 15 8 15;" text="Productos" />
+            <Button onAction="#onModuloClick" style="-fx-background-color: transparent; -fx-border-color: #17A2B8; -fx-text-fill: #17A2B8; -fx-border-radius: 20; -fx-font-weight: bold; -fx-padding: 8 15 8 15;" text="Empleados" />
+            <Button onAction="#onModuloClick" style="-fx-background-color: transparent; -fx-border-color: #17A2B8; -fx-text-fill: #17A2B8; -fx-border-radius: 20; -fx-font-weight: bold; -fx-padding: 8 15 8 15;" text="Cliente" />
+            <Button onAction="#onModuloClick" style="-fx-background-color: transparent; -fx-border-color: #17A2B8; -fx-text-fill: #17A2B8; -fx-border-radius: 20; -fx-font-weight: bold; -fx-padding: 8 15 8 15;" text="Proveedor" />
+
+            <Button fx:id="btnSalir" onAction="#onSalirClick" style="-fx-background-color: transparent; -fx-border-color: #E74C3C; -fx-text-fill: #E74C3C; -fx-border-radius: 20; -fx-font-weight: bold; -fx-padding: 8 15 8 15;" text="Salir" />
+            <HBox HBox.hgrow="ALWAYS" />
+            <Circle fill="WHITE" radius="20.0" stroke="#17a2b8" strokeWidth="2.0" />
         </HBox>
+    </top>
 
-        <!-- BOTONES DE ACCIÓN IZQUIERDA -->
-        <VBox alignment="TOP_CENTER" layoutX="30.0" layoutY="140.0" prefWidth="200.0" spacing="25.0">
-            <children>
-                <Button fx:id="btnAgregar" prefHeight="38.0" prefWidth="180.0" style="-fx-background-color: #178A96; -fx-text-fill: white; -fx-background-radius: 20; -fx-border-color: #0F3B57; -fx-border-radius: 20; -fx-border-width: 2;" text="AGREGAR">
-                    <font><Font name="System Bold" size="13.0" /></font>
-                </Button>
-
-                <Button fx:id="btnEditar" prefHeight="38.0" prefWidth="180.0" style="-fx-background-color: #178A96; -fx-text-fill: white; -fx-background-radius: 20; -fx-border-color: #0F3B57; -fx-border-radius: 20; -fx-border-width: 2;" text="EDITAR">
-                    <font><Font name="System Bold" size="13.0" /></font>
-                </Button>
-
-                <!-- Buscador por ID -->
-                <TextField fx:id="txtBuscarId" prefHeight="30.0" prefWidth="180.0" promptText="ID 🔍" style="-fx-background-radius: 15; -fx-border-color: #0F3B57; -fx-border-radius: 15; -fx-alignment: center;" />
-
-                <Button fx:id="btnEliminar" prefHeight="38.0" prefWidth="180.0" style="-fx-background-color: #178A96; -fx-text-fill: #FF4D4D; -fx-background-radius: 20; -fx-border-color: #0F3B57; -fx-border-radius: 20; -fx-border-width: 2;" text="ELIMINAR">
-                    <font><Font name="System Bold" size="13.0" /></font>
-                </Button>
-            </children>
-        </VBox>
-
-        <!-- ZONA DE BÚSQUEDA Y TABLA PRINCIPAL -->
-        <VBox layoutX="250.0" layoutY="90.0" prefHeight="430.0" prefWidth="570.0" spacing="15.0">
-            <children>
-                <TextField fx:id="txtBuscarGeneral" prefHeight="35.0" prefWidth="570.0" promptText="buscar elemento 🔍" style="-fx-background-radius: 20; -fx-border-color: #0F3B57; -fx-border-radius: 20; -fx-border-width: 1.5; -fx-padding: 0 15 0 15;" />
-
-                <TableView fx:id="tablaDatos" prefHeight="380.0" prefWidth="570.0" style="-fx-border-color: #0F3B57; -fx-border-width: 2;">
-                    <columns>
-                        <TableColumn prefWidth="100.0" text="ID" />
-                        <TableColumn prefWidth="250.0" text="Nombre / Descripción" />
-                        <TableColumn prefWidth="215.0" text="Detalles" />
-                    </columns>
-                </TableView>
-            </children>
-        </VBox>
-
-    </children>
-</AnchorPane>
+    <center>
+        <StackPane fx:id="contentArea" />
+    </center>
+</BorderPane>

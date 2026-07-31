@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="850.0" style="-fx-background-color: #F4F6F0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.integrahub.FormularioAlmacenController">
+    <children>
+        <!-- BARRA DE NAVEGACIÓN SUPERIOR (ALMACÉN ACTIVO) -->
+        <HBox alignment="CENTER" layoutX="35.0" layoutY="25.0" prefHeight="50.0" prefWidth="780.0" spacing="12.0" style="-fx-background-color: #0B3C5D; -fx-background-radius: 25;">
+            <children>
+                <Button style="-fx-background-color: #3BB5C4; -fx-text-fill: #000000; -fx-background-radius: 15;" text="Almacen"><font><Font name="System Bold" size="12.0" /></font></Button>
+                <Button style="-fx-background-color: #178A96; -fx-text-fill: white; -fx-background-radius: 15;" text="Operaciones"><font><Font name="System Bold" size="12.0" /></font></Button>
+                <Button style="-fx-background-color: #178A96; -fx-text-fill: white; -fx-background-radius: 15;" text="Ventas"><font><Font name="System Bold" size="12.0" /></font></Button>
+                <Button style="-fx-background-color: #178A96; -fx-text-fill: white; -fx-background-radius: 15;" text="Empleados"><font><Font name="System Bold" size="12.0" /></font></Button>
+                <Button style="-fx-background-color: #178A96; -fx-text-fill: white; -fx-background-radius: 15;" text="Cliente"><font><Font name="System Bold" size="12.0" /></font></Button>
+                <Button style="-fx-background-color: #178A96; -fx-text-fill: white; -fx-background-radius: 15;" text="Proveedor"><font><Font name="System Bold" size="12.0" /></font></Button>
+                <Button style="-fx-background-color: #178A96; -fx-text-fill: #FF6B6B; -fx-background-radius: 15;" text="Salir"><font><Font name="System Bold" size="12.0" /></font></Button>
+            </children>
+        </HBox>
+
+        <!-- CAMPOS DE CAPTURA DEL MANUAL -->
+        <VBox alignment="CENTER" layoutX="175.0" layoutY="115.0" prefWidth="500.0" spacing="22.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                    <children>
+                        <Label prefWidth="130.0" text="ID ALMACEN">
+                            <font><Font name="System Bold" size="13.0" /></font>
+                        </Label>
+                        <TextField fx:id="txtIdAlmacen" prefHeight="35.0" prefWidth="350.0" style="-fx-border-color: #000000; -fx-border-width: 1.5; -fx-background-color: white;" />
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                    <children>
+                        <Label prefWidth="130.0" text="ZONA">
+                            <font><Font name="System Bold" size="13.0" /></font>
+                        </Label>
+                        <TextField fx:id="txtZona" prefHeight="35.0" prefWidth="350.0" style="-fx-border-color: #000000; -fx-border-width: 1.5; -fx-background-color: white;" />
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                    <children>
+                        <Label prefWidth="130.0" text="PISOS">
+                            <font><Font name="System Bold" size="13.0" /></font>
+                        </Label>
+                        <TextField fx:id="txtPisos" prefHeight="35.0" prefWidth="350.0" style="-fx-border-color: #000000; -fx-border-width: 1.5; -fx-background-color: white;" />
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                    <children>
+                        <Label prefWidth="130.0" text="DIRECCION">
+                            <font><Font name="System Bold" size="13.0" /></font>
+                        </Label>
+                        <TextField fx:id="txtDireccion" prefHeight="35.0" prefWidth="350.0" style="-fx-border-color: #000000; -fx-border-width: 1.5; -fx-background-color: white;" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+
+        <!-- BOTONES DE ACCIÓN: GUARDAR, LIMPIAR CAMPOS, SALIR -->
+        <HBox alignment="CENTER" layoutX="100.0" layoutY="430.0" prefWidth="650.0" spacing="25.0">
+            <children>
+                <Button fx:id="btnGuardar" onAction="#onGuardarClick" prefHeight="42.0" prefWidth="180.0" style="-fx-background-color: #178A96; -fx-text-fill: white; -fx-background-radius: 20; -fx-border-color: #0B3C5D; -fx-border-radius: 20; -fx-border-width: 2;" text="GUARDAR">
+                    <font><Font name="System Bold" size="13.0" /></font>
+                </Button>
+                <Button fx:id="btnLimpiar" onAction="#onLimpiarClick" prefHeight="42.0" prefWidth="180.0" style="-fx-background-color: #178A96; -fx-text-fill: white; -fx-background-radius: 20; -fx-border-color: #0B3C5D; -fx-border-radius: 20; -fx-border-width: 2;" text="LIMPIAR CAMPOS">
+                    <font><Font name="System Bold" size="12.0" /></font>
+                </Button>
+                <Button fx:id="btnSalir" onAction="#onSalirClick" prefHeight="42.0" prefWidth="180.0" style="-fx-background-color: #178A96; -fx-text-fill: #FF4D4D; -fx-background-radius: 20; -fx-border-color: #0B3C5D; -fx-border-radius: 20; -fx-border-width: 2;" text="SALIR">
+                    <font><Font name="System Bold" size="13.0" /></font>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
